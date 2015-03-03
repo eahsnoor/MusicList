@@ -1,5 +1,10 @@
 import java.util.Arrays;
-
+{
+   public static String Clean(String str)
+ {
+   return str.substring(1,str.substring()-1).trim();
+   }
+   
 public class MusicRunner
 {
   public static void main (String[] args)
@@ -25,8 +30,11 @@ public class MusicRunner
       // You probably will comment this out but for now print out the line so you can see what is there
       System.out.println(Arrays.toString(data));
       
+      int year = Integer.parseInt(Clean(data[3]));
+      double score = Double.parseDouble(Clean(data[4]));
+      
       // Let's try to create a Song object
-      Song song = new Song(data[0], data[1]);  // data[0] is the artist and data[1] is the name
+      Song song = new Song(Clean(data[0], Clean(data[1]), year, 3.1, "notes here";  // data[0] is the artist and data[1] is the name
       
       count++;
       
